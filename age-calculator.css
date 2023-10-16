@@ -7,6 +7,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100wv;
 }
 nav{
     display: flex;
@@ -52,8 +54,6 @@ input{
 .calendar{
     display: flex;
 }
-
-
 #submit{
     padding: 10px;
     border: solid gray 1px;
@@ -106,6 +106,15 @@ input{
         font-size: 10px;
 
     }
-   
+    
+   .calendar{
+    display: flex;
+    flex-direction: column;
+   }
+   .form{
+    width: 70vw;
+    height: 70vh;
+   }
+
 }
 
