@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="age-calculator.css">
+</head>
+<body>
+    <nav>
+        <h2>Calculate Your Age to the exact Days!</h2>
+    </nav>
+    <div class="container">
+        <div class="form">
+            <form id="ageform">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Enter name" id="name" class="input">
+                <div class="calendar">
+                    <label for="day">Day</label>
+                    <input type="number" placeholder="DD" id="day"  min="1" max="31" id="day">
+                    <label for="month">Month</label>
+                    <input type="number" placeholder="MM" id="month"  min="1" max="12" id="month">
+                    <label for="year">Year</label>
+                    <input type="number" placeholder="YYYY" id="year"  id="year">
+
+                </div>
+               
+
+            </form>
+            <button id="submit">Submit</button>
+
+            <div class="answer" style="display: none;">
+                <ul id="agebox"></ul>
+            </div>
+        </div>
+      
+    </div>
+</body>
+<script src="./age-calculator.js"></script>
+</html>

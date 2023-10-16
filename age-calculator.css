@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid gray 1px;
+    text-align: center;
+    height: 50px;
+    width: 400px;
+    color: blue;
+}
+.container{
+    width: 80vw;
+    height: 85vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 70vh;
+}
+#ageform{
+    border: solid gray 1px;
+    padding: 30px;
+    border-radius: 5px;
+
+}
+input{
+    padding: 15px;
+    display: block;
+    border-radius: 5px;
+    margin: 10px;
+    border: solid gray 1px;
+    width: 100%;
+
+}
+.calendar{
+    display: flex;
+}
+.calendarr{
+    border-bottom: solid gray 1px;
+}
+#submit{
+    padding: 10px;
+    border: solid gray 1px;
+    color: white;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: rgb(77, 126, 165);
+
+}
+#submit:hover{
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+.answer{
+    width: 200px;
+    height: 70px;
+    border: solid gray 1px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#agebox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+}
+
+@keyframes animateAge {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  #agebox p {
+    animation: animateAge 1s ease-in-out;
+  }
+
+/*  media queries */
+
+@media screen and  (max-width:720px) {
+    nav{
+        font-size: 10px;
+
+    }
+   
+}
+
