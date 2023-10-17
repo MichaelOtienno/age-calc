@@ -6,26 +6,42 @@ document.querySelector('#submit').addEventListener('click', (e) => {
     const day = parseInt(document.getElementById('day').value);
     const month = parseInt(document.getElementById('month').value);
     const year = parseInt(document.getElementById('year').value);
+    const alert = document.getElementById('alert');
 
     if (name.trim() === '' || isNaN(day) || isNaN(month) || isNaN(year)) {
-        alert('Fill all inputs');
+        alert.textContent = 'Fill all inputs!'
+        setTimeout(()=>{
+            alert.textContent = ''
+        },5000)
         return;
     }
 
     if (day > 31 || day < 1 || month > 12 || month < 1) {
-        alert('Invalid date');
+        alert.textContent = 'Invalid date!'
+        setTimeout(()=>{
+            alert.textContent = ''
+        },5000)
         return;
     }
 
     if (month === 2) {
         if (year % 4 !== 0 && day > 28) {
-            alert('February has less 28 days only');
+            alert.textContent = 'February cannot have more than 28 days!'
+            setTimeout(()=>{
+                alert.textContent = ''
+            },5000)
             return;
         }
+           
         if (year % 4 === 0 && day > 29) {
-            alert('February has 29 days only');
+            alert.textContent = 'February cannot have more than 29 days!'
+            setTimeout(()=>{
+                alert.textContent = ''
+            },5000)
             return;
         }
+            
+        
     }
 
     const dob = new Date(year, month - 1, day); 
@@ -33,8 +49,11 @@ document.querySelector('#submit').addEventListener('click', (e) => {
     const currentDate = new Date();
 
     if (dob > currentDate) {
-        alert('Date of birth cannot be in the future');
+        setTimeout(() => {
+            alert.textContent = 'Date of birth cannot be in the future!'
+        },5000)
         return;
+        
     }
 
     display.innerHTML = '';
@@ -78,7 +97,7 @@ document.querySelector('#submit').addEventListener('click', (e) => {
     setTimeout(() => {
         display.innerText = '';
         answer.style.display = 'none'
-    }, 10000);
+    }, 13000);
 
     document.getElementById("ageform").reset();
 });

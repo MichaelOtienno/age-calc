@@ -98,6 +98,10 @@ input{
   #agebox p {
     animation: animateAge 1s ease-in-out;
   }
+  #alert{
+    color: red;
+    font-weight: bold;
+  }
 
 /*  media queries */
 
